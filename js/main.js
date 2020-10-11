@@ -1,7 +1,14 @@
-  $(document).ready(function(){
-    $('#container')
-    .find('.hot')
-    .children()
-    .first().next()
+/*   $(document).ready(function(){
+    $('#snow')
+    .parent()
+    .find('.title')
     .addClass('highlight');
+  }); */
+
+  $(document).ready(function(){
+    $('#Snow')
+    .parent()
+    .find('.title')
+    .addClass('highlight')
+
   });
