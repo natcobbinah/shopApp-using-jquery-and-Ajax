@@ -9,7 +9,8 @@ $(document).ready(function(){
     html +='<img src="assets/beach.jpg">';
     html +='<div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>';
     html +='<div class="price">499</div>';
-    html +='<button>Add to cart</button>';
+    html +='<button class="item-add">Add to cart</button>';
+    html +='<button class="item-remove">Remove</button>';
     html +='<br />';
     html +='<a href="#">More info</a>';
     html +='<div class="more-info">Lorem, ipsum ex suscipit facere. Facilis, suscipit commodi.</div>';
@@ -17,4 +18,10 @@ $(document).ready(function(){
 
     $('#container').prepend(html);
   });
+
+  $('#container').on('click','.item-remove',function(){
+    $(this).parent().remove();
+  });
+  
 });
+
