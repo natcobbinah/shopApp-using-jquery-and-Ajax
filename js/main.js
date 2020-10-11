@@ -1,6 +1,7 @@
   $(document).ready(function(){
     $('#container')
     .find('.hot')
-    .children('.non-solid')
+    .children()
+    .first().next()
     .addClass('highlight');
   });
