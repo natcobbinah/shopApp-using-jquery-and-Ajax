@@ -25,7 +25,7 @@
     });
   }); */
 
-  $(document).ready(function(){
+ /*  $(document).ready(function(){
     $('#select-menu').on('change',function(){
       let name = $('#select-menu option:selected').text();
       let distance = $('#select-menu option:selected').val();
@@ -36,5 +36,12 @@
       }else{
         $('#feedback-message').text('');
       }
+    });
+  }); */
+
+  $(document).ready(function(){
+    $('#input-name').on('keydown',function(){
+      let name = $(this).val();
+      $('#feedback-message').text('Pleased to meet you ,' + name)
     });
   });
