@@ -1,52 +1,20 @@
-/*   $(document).ready(function(){
-    $('#snow')
-    .parent()
-    .find('.title')
-    .addClass('highlight');
-  }); */
+$(document).ready(function(){
+  $('#button-create-item').on('click',function(){
+    let name=$('#input-new-item').val();
+    $('#input-new-item').val('');
 
- /*  $(document).ready(function(){
-    $('#Snow')
-    .parent()
-    .find('.title')
-    .addClass('highlight')
+    let html='';
+    html +='<div class="item">';
+    html +='<div class="name">' + name + '</div>';
+    html +='<img src="assets/beach.jpg">';
+    html +='<div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>';
+    html +='<div class="price">499</div>';
+    html +='<button>Add to cart</button>';
+    html +='<br />';
+    html +='<a href="#">More info</a>';
+    html +='<div class="more-info">Lorem, ipsum ex suscipit facere. Facilis, suscipit commodi.</div>';
+    html +='</div>';
 
-  }); */
-
- /*  $(document).ready(function(){
-    $('.box').on('click','.box-button',function(){
-      $(this).parent().toggleClass('highlight');
-    })
-  }); */
-
-  /* $(document).ready(function(){
-    $('#select-menu').on('change',function(){
-      console.log("hello");
-    });
-  }); */
-
- /*  $(document).ready(function(){
-    $('#select-menu').on('change',function(){
-      let name = $('#select-menu option:selected').text();
-      let distance = $('#select-menu option:selected').val();
-      let price = $('#select-menu option:selected').data('price');
-    
-      if(distance){
-         $('#feedback-message').text('You are signing up for a ' + name + ',which costs ' + price + ', to a distance of ' + distance + ' km');
-      }else{
-        $('#feedback-message').text('');
-      }
-    });
-  }); */
-
-  $(document).ready(function(){
-    $('#input-name').on('keydown',function(){
-      let name = $(this).val();
-      $('#feedback-message').text('Pleased to meet you ,' + name)
-    });
-    
-    $('a').on('click',function(event){
-      event.preventDefault();
-      $('#feedback-message').text('That\'s fine!');
-    });
-  });   
+    $('#container').prepend(html);
+  });
+});

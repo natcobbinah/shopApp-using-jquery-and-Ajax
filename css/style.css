@@ -1,27 +1,31 @@
-/* .highlight{
-    color: #00F;
+body{
+    background-color: #EEE;
+}
+
+#container{
+    background-color: #FFF;
+    padding: 12px;
+    height: 100%;
+    margin: 12px;
 }
 
 .item{
-    margin-left: 8px;
-} */
-
-/* .box{
-    width: 100px;
-    height: 100px;
-    background-color: #CFC;
+    width: 200px;
+    background-color: #DDD;
+    padding: 8px;
+    float: left;
+    margin-right: 4px;
 }
 
-.highlight{
-    background-color: #FCC;
+.item img{
+    width: 100%;
 }
 
-.box-button{
-    width:100px;
-    height: 20px;
-    background-color: #CCF;
-    text-align: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-} */
+.item .name{
+    font-size: 24px;
+}
+
+.item .price{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
