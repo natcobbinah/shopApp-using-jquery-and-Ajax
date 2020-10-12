@@ -1,6 +1,8 @@
-function addItem(name,description,price,moreInfo){
+var cart =0;
+
+function addItem(id,name,description,price,moreInfo){
   let html='';
-  html +='<div class="item">';
+  html +='<div class="item" data-id="'+ id + '">';
   html +='<div class="name">' + name + '</div>';
   html +='<img src="assets/beach.jpg">';
   html +='<div class="description">' + description + '</div>';
@@ -44,13 +46,35 @@ $(document).ready(function(){
     let item = response.items;
     item.forEach(function(itemRetrieved){
       console.log(itemRetrieved)
-      addItem(itemRetrieved.name, itemRetrieved.description,itemRetrieved.price,itemRetrieved.moreInfo);
+      addItem(itemRetrieved.id,itemRetrieved.name, itemRetrieved.description,itemRetrieved.price,itemRetrieved.moreInfo);
     });
   })
   .fail(function(request,errorType,errorMessage){
     console.log(errorMessage);
   })
-  .always()
+  .always(function(){
+
+  });
   
+   $('#container').on('click','.item-add',function(){
+    let id=$(this).parent().data('id'); 
+    console.log(id);
+    $.ajax('data/addToCart.json',{
+        type: 'post',
+        data: {id: id},
+        dataType: 'json',
+        contentType: 'application/json'
+      })
+      .done(function(response){
+        console.log(response);
+        if(response.message ===  'success'){
+          let price = response.price;
+          
+          cart += price;
+
+          $('#cart-container').text('$' +  cart);
+        }
+    });
+  }); 
 });
 

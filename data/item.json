@@ -1,14 +1,17 @@
 {
     "items":[
-        {"name:" : "Santa Monica",
+        {"id":1000,
+         "name:" : "Santa Monica",
          "description": "Lorem ipsum dolor sit amet",
          "price" : 499,
          "moreInfo" : "Lorem ipsum dolor sit amet"},
-         {"name:" : "Pacific",
+         {"id":1001,
+          "name:" : "Pacific",
           "description": "Lorem ipsum dolor sit amet",
           "price" : 499,
           "moreInfo" : "Lorem ipsum dolor sit amet"},
-         {"name:" : "Long Beach ",
+         {"id":1002,
+          "name:" : "Long Beach ",
           "description": "Lorem ipsum dolor sit amet",
           "price" : 499,
           "moreInfo" : "Lorem ipsum dolor sit amet"}
