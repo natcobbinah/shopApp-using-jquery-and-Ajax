@@ -1,0 +1,16 @@
+{
+    "items":[
+        {"name:" : "Santa Monica",
+         "description": "Lorem ipsum dolor sit amet",
+         "price" : 499,
+         "moreInfo" : "Lorem ipsum dolor sit amet"},
+         {"name:" : "Pacific",
+          "description": "Lorem ipsum dolor sit amet",
+          "price" : 499,
+          "moreInfo" : "Lorem ipsum dolor sit amet"},
+         {"name:" : "Long Beach ",
+          "description": "Lorem ipsum dolor sit amet",
+          "price" : 499,
+          "moreInfo" : "Lorem ipsum dolor sit amet"}
+    ]
+}
