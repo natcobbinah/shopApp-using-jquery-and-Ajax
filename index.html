@@ -17,21 +17,25 @@
         $0
     </div>
     <div class="user-data">
+        <form id="cart-form" method="post" action="data/cartSubmit.json">
         <br />
         <label>Name</label>
-        <input type="text"></input>
+        <input name="name" type="text"></input>
         <br />
         <label>Email</label>
-        <input type="text"></input>
+        <input name="email" type="text"></input>
         <br />
         <label>Newsletter</label>
-        <input id="newsletter-checkbox" checked type="checkbox"></input>
+        <input name="wantNewsletter" id="newsletter-checkbox" checked type="checkbox"></input>
         <br />
-        <select id="newsletter-frequency">
+        <select name="newsletterFrequency" id="newsletter-frequency">
             <option>----</option>
             <option selected>Weekly</option>
             <option>Monthly</option>
         </select>
+        <br />
+        <button id="submit-cart">Submit</button>
+        </form>
     </div>
     <div id="container">
         <div class="item">
