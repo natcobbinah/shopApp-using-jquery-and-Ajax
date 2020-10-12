@@ -58,15 +58,12 @@ $(document).ready(function(){
   
    $('#container').on('click','.item-add',function(){
     let id=$(this).parent().data('id'); 
-    console.log(id);
     $.ajax('data/addToCart.json',{
-        type: 'post',
         data: {id: id},
         dataType: 'json',
         contentType: 'application/json'
       })
       .done(function(response){
-        console.log(response);
         if(response.message ===  'success'){
           let price = response.price;
           
@@ -76,5 +73,16 @@ $(document).ready(function(){
         }
     });
   }); 
+
+  $('#newsletter-checkbox').on('change',function(){
+    if($(this).is(':checked')){
+      $('#newsletter-frequency').show().fadeIn();
+    }else{
+      $('#newsletter-frequency').hide().fadeOut();
+    }
+  });
+
+  $('#newsletter-checkbox').trigger('change');
+  
 });
 
